@@ -23,16 +23,16 @@ function calculateCount(inputs) {
   return CountArray;
 }
 
-function makeReceipt(Count) {
+function makeReceipt(CountArray) {
   var Receipt=[];
-  for (let i = 0; i < Count.length; i++) {
+  for (let i = 0; i < CountArray.length; i++) {
       Receipt.push({
-        barcode: Count[i].barcode,
-        name:    Count[i].name,
-        unit:    Count[i].unit,
-        price:   Count[i].price,
-        count:   Count[i].count,
-        sum:     Count[i].count * Count[i].price
+        barcode: CountArray[i].barcode,
+        name:    CountArray[i].name,
+        unit:    CountArray[i].unit,
+        price:   CountArray[i].price,
+        count:   CountArray[i].count,
+        sum:     CountArray[i].count * CountArray[i].price
     })
   }
   return Receipt;
